@@ -122,13 +122,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
 			<!-- The core Firebase JS SDK is always required and must be listed first -->
-			<script src="/__/firebase/6.1.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 
 			<!-- TODO: Add SDKs for Firebase products that you want to use
-			https://firebase.google.com/docs/web/setup#reserved-urls -->
+				 https://firebase.google.com/docs/web/setup#config-web-app -->
 
-			<!-- Initialize Firebase -->
-			<script src="/__/firebase/init.js"></script>
+			<script>
+			  // Your web app's Firebase configuration
+			  var firebaseConfig = {
+				apiKey: "AIzaSyBgdU2FB_qYvHR3EwoCYZN4t0zn2NWWoyY",
+				authDomain: "luana-72d14.firebaseapp.com",
+				databaseURL: "https://luana-72d14.firebaseio.com",
+				projectId: "luana-72d14",
+				storageBucket: "",
+				messagingSenderId: "708590523125",
+				appId: "1:708590523125:web:0fdea5f9b7338b08"
+			  };
+			  // Initialize Firebase
+			  firebase.initializeApp(firebaseConfig);
+			</script>
 	</body>
 </html>

@@ -29,3 +29,155 @@ Before we get started, keep in mind:
     at emitOne (events.js:121:20)
     at process.emit (events.js:211:7)
     at processEmit [as emit] (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:149:35)
+[debug] [2019-06-14T16:17:47.574Z] ----------------------------------------------------------------------
+[debug] [2019-06-14T16:17:47.575Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2019-06-14T16:17:47.576Z] CLI Version:   7.0.0
+[debug] [2019-06-14T16:17:47.576Z] Platform:      linux
+[debug] [2019-06-14T16:17:47.576Z] Node Version:  v8.10.0
+[debug] [2019-06-14T16:17:47.576Z] Time:          Fri Jun 14 2019 18:17:47 GMT+0200 (CEST)
+[debug] [2019-06-14T16:17:47.576Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-14T16:17:47.583Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-14T16:17:47.583Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Randolf
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[error] 
+[error] Error: Must select at least one feature. Use SPACEBAR to select features, or provide a feature with firebase init [feature_name]
+[debug] [2019-06-14T16:18:29.714Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Randolf/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+    at processEmit [as emit] (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:149:35)
+    at process.exit (internal/process.js:157:15)
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/errorOut.js:14:17)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-06-14T16:18:33.816Z] ----------------------------------------------------------------------
+[debug] [2019-06-14T16:18:33.817Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2019-06-14T16:18:33.818Z] CLI Version:   7.0.0
+[debug] [2019-06-14T16:18:33.818Z] Platform:      linux
+[debug] [2019-06-14T16:18:33.818Z] Node Version:  v8.10.0
+[debug] [2019-06-14T16:18:33.818Z] Time:          Fri Jun 14 2019 18:18:33 GMT+0200 (CEST)
+[debug] [2019-06-14T16:18:33.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-14T16:18:33.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-14T16:18:33.824Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Randolf
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-06-14T16:18:35.777Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-14T16:18:35.778Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-14T16:18:35.945Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-14T16:18:35.952Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?page_size=100  
+ 
+[debug] [2019-06-14T16:18:36.282Z] <<< HTTP RESPONSE 200
+[info] i  Using project luana-72d14 (Luana)
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2019-06-14T16:22:43.607Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Randolf/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+    at processEmit [as emit] (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:149:35)
+[debug] [2019-06-14T16:23:41.153Z] ----------------------------------------------------------------------
+[debug] [2019-06-14T16:23:41.155Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2019-06-14T16:23:41.156Z] CLI Version:   7.0.0
+[debug] [2019-06-14T16:23:41.156Z] Platform:      linux
+[debug] [2019-06-14T16:23:41.156Z] Node Version:  v8.10.0
+[debug] [2019-06-14T16:23:41.156Z] Time:          Fri Jun 14 2019 18:23:41 GMT+0200 (CEST)
+[debug] [2019-06-14T16:23:41.156Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-14T16:23:41.163Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-14T16:23:41.163Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Randolf
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-06-14T16:24:16.213Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?page_size=100  
+ 
+[debug] [2019-06-14T16:24:16.537Z] <<< HTTP RESPONSE 200
+[info] i  Using project luana-72d14 (Luana)
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote public/404.html
+[debug] [2019-06-14T16:25:16.179Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2019-06-14T16:25:16.293Z] <<< HTTP RESPONSE 200
+[info] ✔  Wrote public/index.html
+[info] 
+[info] i  Writing configuration info to firebase.json...
+[info] i  Writing project information to .firebaserc...
+[info] 
+[info] ✔  Firebase initialization complete!
+[debug] [2019-06-14T16:25:16.328Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Randolf/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+    at processEmit [as emit] (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:149:35)

@@ -2061,7 +2061,7 @@ input, select, textarea {
 		position: relative;
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
-		padding: 5em 0 4em 0;
+		padding: 0 0 4em 0;
 		text-align: center;
 	}
 
@@ -2074,6 +2074,41 @@ input, select, textarea {
 		}
 
 /* Nav */
+	#btns {
+		margin: 0 0 2.5em 0;
+		padding: 1em 0 0 0;
+	}
+
+		#btns > ul {
+			margin: 0;
+		}
+
+			#btns > ul > li {
+				display: inline-block;
+				font-style: italic;
+				margin: 0 0.35em 0 0.35em;
+			}
+
+				#btns > ul > li > ul {
+					display: none;
+				}
+
+				#btns > ul > li > a {
+					border-radius: 5px;
+					background-color: #5d5d5d;
+					color: #fff;
+					text-decoration: none;
+					padding: 0.6em 1.2em 0.6em 1.2em;
+					-moz-transition: background-color .25s ease-in-out;
+					-webkit-transition: background-color .25s ease-in-out;
+					-ms-transition: background-color .25s ease-in-out;
+					transition: background-color .25s ease-in-out;
+					outline: 0;
+				}
+
+				#btns > ul > li:hover > a, #btns > ul > li.active > a {
+					background: #000;
+				}
 
 	#nav {
 		margin: 2.5em 0 0 0;
@@ -2379,11 +2414,13 @@ input, select, textarea {
 			ul.social li {
 				margin: 0 0 0.25em 0.75em;
 			}
+		
 
+		
 		/* Header */
 
 			#header {
-				padding: 4em 0 3em 0;
+				padding: 0 0 3em 0;
 			}
 
 		/* Banner */
@@ -2479,7 +2516,10 @@ input, select, textarea {
 			}
 
 		/* Nav */
-
+		
+			#btns {
+				display: none;
+			}
 			#nav {
 				display: none;
 			}

@@ -207,6 +207,11 @@ body {
   -webkit-transform: translate(-12%, -75%) scale(0.75);
           transform: translate(-12%, -75%) scale(0.75);
 }
+.card .input-container input:checked ~ label {
+  color: #9d9d9d;
+  -webkit-transform: translate(-12%, -75%) scale(0.75);
+          transform: translate(-12%, -75%) scale(0.75);
+}
 .card .input-container label {
   position: absolute;
   top: 0;

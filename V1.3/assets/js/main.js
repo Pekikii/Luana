@@ -1,6 +1,7 @@
 
 (function($) {
 
+	
 	var	$window = $(window),
 		$body = $('body');
 
@@ -41,6 +42,8 @@
 				'<div id="navPanel">' +
 					'<nav>' +
 						$('#nav').navList() +
+					'</nav>' +
+					'<nav>' +
 						$('#btns').navList() +
 					'</nav>' +
 				'</div>'

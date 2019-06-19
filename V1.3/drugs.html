@@ -119,33 +119,38 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-			<!-- The core Firebase JS SDK is always required and must be listed first -->
-			<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 
-			<!-- TODO: Add SDKs for Firebase products that you want to use
-				 https://firebase.google.com/docs/web/setup#config-web-app -->
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+		<script>
+		  // Your web app's Firebase configuration
+		  var firebaseConfig = {
+			apiKey: "AIzaSyBgdU2FB_qYvHR3EwoCYZN4t0zn2NWWoyY",
+			authDomain: "luana-72d14.firebaseapp.com",
+			databaseURL: "https://luana-72d14.firebaseio.com",
+			projectId: "luana-72d14",
+			storageBucket: "",
+			messagingSenderId: "708590523125",
+			appId: "1:708590523125:web:0fdea5f9b7338b08"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		</script>
+		<script src="assets/js/login.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-			<script>
-			  // Your web app's Firebase configuration
-			  var firebaseConfig = {
-				apiKey: "AIzaSyBgdU2FB_qYvHR3EwoCYZN4t0zn2NWWoyY",
-				authDomain: "luana-72d14.firebaseapp.com",
-				databaseURL: "https://luana-72d14.firebaseio.com",
-				projectId: "luana-72d14",
-				storageBucket: "",
-				messagingSenderId: "708590523125",
-				appId: "1:708590523125:web:0fdea5f9b7338b08"
-			  };
-			  // Initialize Firebase
-			  firebase.initializeApp(firebaseConfig);
-			</script>
 
 	</body>
 </html>

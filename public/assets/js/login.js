@@ -2,18 +2,20 @@
 (function($) {
 	const auth = firebase.auth();
 	var mail;
-
+	var pageName = window.location.pathname.split("/").pop();
+	
 	auth.onAuthStateChanged(function(user) {
-	  if (user) {
-		if(window.location.href =="file:///D:/Programming%20etc/Shared%20Folder%20Ubuntu%20Main%2018.04.2/Luana/V1.3/login.html"){
-			mail = user.email;
-			window.location.replace ("index.html");
+		if (user) {
+		console.log(user.email);
+		if(pageName == "index.html"){
+			console.log("user signed in and on login page. Redirecting to main.html Link: " + pageName);
+			window.location.replace ("main.html");
 
 		}
 	  } else {
-			if(window.location.href !="file:///D:/Programming%20etc/Shared%20Folder%20Ubuntu%20Main%2018.04.2/Luana/V1.3/login.html"){
-				mail = null;
-				window.location.replace ("login.html");
+			if(pageName != "index.html"){
+				console.log("user not signed in and not on login page. Redirecting to index.html Link: " + pageName);
+				window.location.replace ("index.html");
 
 			}
 		}
@@ -21,6 +23,7 @@
 
 
 	function logOut(){
+		console.log("logged out");
 		auth.signOut().then(function(){
 		return true;
 
@@ -31,10 +34,23 @@
 
 		});
 	};
-	$("button#btnLogOut").on("click", logOut);
-
+	$(document).ready(function(){
+		$("body").on("click", "#btnLogOut", function() {
+			logOut();
+			
+		});
+	});
+	
+	/*document.addEventListener('DOMContentLoaded',function(){
+        document.getElementById('btnLogOut').addEventListener('click',function(){
+            alert('hiii');
+        },false);
+    },false);*/
+	
+	console.log($("#btnLogOut"));
 
 	function logIn(){
+		console.log("logged in");
 		var userEmail = document.getElementById("txtEmail").value;
 		var userPass = document.getElementById("txtPassword").value;
 
@@ -45,8 +61,10 @@
 		window.alert("Error : " + errorMessage);
 		});
 	};
-	$("button#btnLogIn").on("click", logIn);
+	$(document).ready(function(){
+		$("button#btnLogIn").on("click", logIn);
+	});
+	
+	
 	
 })(jQuery);
-
-

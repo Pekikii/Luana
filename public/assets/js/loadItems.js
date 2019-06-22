@@ -41,10 +41,10 @@
 		};
 		
 	setInterval(function(){
-		if(pageName == "whips.html"){
+		if(pageName == "cars.html"){
 			col = "cars";
 		
-		}else if(pageName == "cribs.html") {
+		}else if(pageName == "realEstate.html") {
 			col = "realEstate";
 			
 		}

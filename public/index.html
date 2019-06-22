@@ -6,63 +6,49 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/login.css" />
+
+
 	</head>
 	<body class="homepage is-preload">
-
 		<div id="page-wrapper">
 
 			<!-- Header -->
-
-				<section id="header">
+				<section id="loginHeader">
 
 					<!-- Logo -->
-						<nav id="btns">
-							<ul>
-								<li><button id="btnLogOut" >Logout</button></li>
-								<!-- <li><a id="lang" href="login.html" onclick="return logOut();">EN</a></li> -->
-							</ul>
-						</nav>
-						<h1><a href="index.html">Luana Real Estate</a></h1> 
+					<h1><a>Luana Real Estate</a></h1> 
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li><a href="whips.html">Whips</a></li>
-								<li><a href="cribs.html">Cribs</a></li>
-							</ul>
-
-						</nav>
-
-					<!-- Banner -->
-						<section id="banner">
-							<header>
-								<h2>Luana Immobilien</h2>
-								<p>"It's Free Real Estate"</p>
-							</header>
-						</section>
 				</section>
-				
+
+			
 			<!-- Main -->
 				<section id="main">
 					<div class="container">
 
 						<!-- Content -->
-							<article class="box post">
-								<a class="image featured"><img src="images/aboutUs.jpg" alt="" /></a>
-								<header>
-									<h2>About us</h2>
-									<p>The following advertisement is intended for Jim Boonie only.</p>
-								</header>
-								<p>
-									It's free! Real Estate! We're giving you land! It's free. We're giving you a house. It's real estate. Free. Its a free house for you, Jim. This is free real estate! You gotta bring furniture, but the house is free! Two bedrooms, no rugs. It's free! You unlock the door to your free house, we got you the real estate! It's a two bedroom house, its free, its got a pool in the back. I'm not carrying this around all day! It's for your house! Free real estate i'll pee my pants. Jim, come get your damn land. It's a free house! Jim, I got real estate. Jim, does it get better than this? Jim! The house is free! Jim! The house is free! Its a free f**king house. It's free real estate.
-
-								</p>
-								<p>
-									It's free! Real Estate! We're giving you land! It's free. We're giving you a house. It's real estate. Free. Its a free house for you, Jim. This is free real estate! You gotta bring furniture, but the house is free! Two bedrooms, no rugs. It's free! You unlock the door to your free house, we got you the real estate! It's a two bedroom house, its free, its got a pool in the back. I'm not carrying this around all day! It's for your house! Free real estate i'll pee my pants. Jim, come get your damn land. It's a free house! Jim, I got real estate. Jim, does it get better than this? Jim! The house is free! Jim! The house is free! Its a free f**king house. It's free real estate.
-
-								</p>
-							</article>
+						<!-- Mixins-->
+						<div class="loginContainer">
+						  <div class="card"></div>
+						  <div class="card">
+							<h1 class="title">Login</h1>
+							<form>
+							  <div class="input-container">
+								<input type="text" id="txtEmail" required="required"/>
+								<label for="email_field">E-Mail</label>
+								<div class="bar"></div>
+							  </div>
+							  <div class="input-container">
+								<input type="password" id="txtPassword" required="required"/>
+								<label for="password_field">Password</label>
+								<div class="bar"></div>
+							  </div>
+							  <div class="button-container">
+								<button onclick="return false;" id="btnLogIn" ><span>Go</span></button>
+							  </div>
+							</form>
+						  </div>
+						</div>
 					</div>
 				</section>
 				
@@ -70,18 +56,7 @@
 				<section id="footer">
 					<div class="container">
 						<div class="row aln-center">
-							<div class=" col-4  col-12-medium ">
-								<section id="socialsec">
-									<header>
-										<h2>Social</h2>
-									</header>
-									<ul class="social">
-										<li><a class="icon brands fa-facebook" href="#"><span class="label">Facebook</span></a></li>
-										<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-										<li><a class="icon brands fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</section>
-							</div>
+
 							<div class="col-12">
 							
 								<!-- Copyright -->
@@ -96,12 +71,10 @@
 					</div>
 				</section>
 
-		</div>
-
 		<!-- Scripts -->
-
+		<script src="assets/js/jquery.min.js"></script>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 
 		<!-- TODO: Add SDKs for Firebase products that you want to use
@@ -124,8 +97,6 @@
 		  firebase.initializeApp(firebaseConfig);
 		</script>
 		<script src="assets/js/login.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>

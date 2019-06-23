@@ -41,6 +41,12 @@
 		});
 	});
 	
+	$(document).ready(function(){
+		$(document).on("tap", ".btnLogOut", function() {
+			logOut();
+			
+		});
+	});
 	/*document.addEventListener('DOMContentLoaded',function(){
         document.getElementById('btnLogOut').addEventListener('click',function(){
             alert('hiii');
@@ -63,6 +69,9 @@
 	};
 	$(document).ready(function(){
 		$("button#btnLogIn").on("click", logIn);
+	});
+		$(document).ready(function(){
+		$("button#btnLogIn").on("tap", logIn);
 	});
 	
 	

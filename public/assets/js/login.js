@@ -6,16 +6,18 @@
 	
 	auth.onAuthStateChanged(function(user) {
 		if (user) {
-		console.log(user.email);
+			//alert("logged in");
+		//console.log(user.email);
 		if(pageName == "index.html"){
-			console.log("user signed in and on login page. Redirecting to main.html Link: " + pageName);
-			window.location.replace ("main.html");
+			//console.log("user signed in and on login page. Redirecting to main.html Link: " + pageName);
+			window.location = "main.html";
 
 		}
 	  } else {
+			//alert("not logged in");
 			if(pageName != "index.html"){
-				console.log("user not signed in and not on login page. Redirecting to index.html Link: " + pageName);
-				window.location.replace ("index.html");
+				//console.log("user not signed in and not on login page. Redirecting to index.html Link: " + pageName);
+				window.location = "index.html";
 
 			}
 		}
@@ -23,7 +25,7 @@
 
 
 	function logOut(){
-		console.log("logged out");
+		//console.log("logged out");
 		auth.signOut().then(function(){
 		return true;
 
@@ -35,28 +37,23 @@
 		});
 	};
 	$(document).ready(function(){
-		$(document).on("click", ".btnLogOut", function() {
-			logOut();
-			
-		});
+		$("button#btnLogOut").on("click", logOut);
+		$("button#btnLogOut").on("tap", logOut);
+		$("button#btnLogOut span").on("click", logOut);
+		$("button#btnLogOut span").on("tap", logOut);
 	});
 	
-	$(document).ready(function(){
-		$(document).on("tap", ".btnLogOut", function() {
-			logOut();
-			
-		});
-	});
+
 	/*document.addEventListener('DOMContentLoaded',function(){
         document.getElementById('btnLogOut').addEventListener('click',function(){
             alert('hiii');
         },false);
     },false);*/
 	
-	console.log($(".btnLogOut"));
+	//console.log($(".btnLogOut"));
 
 	function logIn(){
-		console.log("logged in");
+		//console.log("logged in");
 		var userEmail = document.getElementById("txtEmail").value;
 		var userPass = document.getElementById("txtPassword").value;
 
@@ -69,11 +66,9 @@
 	};
 	$(document).ready(function(){
 		$("button#btnLogIn").on("click", logIn);
-	});
-		$(document).ready(function(){
 		$("button#btnLogIn").on("tap", logIn);
 	});
-	
+
 	
 	
 })(jQuery);

@@ -37,13 +37,13 @@
 				'</div>'
 			)
 				.appendTo($body);
-		
+		console.log($('#btns').navList());
 		// Panel.
 			$(
 				'<div id="navPanel">' +
 					'<nav>' +
 						$('#nav').navList() +
-						$('#btns').navList() +
+					//	$('#btns').navList() +
 					'</nav>' +
 				'</div>'
 			)
@@ -58,5 +58,8 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+			//$($('#btns').navList()).appendTo("#navPanel nav");
+
+
 		}
 })(jQuery);

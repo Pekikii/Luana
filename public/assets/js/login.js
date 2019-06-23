@@ -35,7 +35,7 @@
 		});
 	};
 	$(document).ready(function(){
-		$("body").on("click", "#btnLogOut", function() {
+		$(document).on("click", ".btnLogOut", function() {
 			logOut();
 			
 		});
@@ -47,7 +47,7 @@
         },false);
     },false);*/
 	
-	console.log($("#btnLogOut"));
+	console.log($(".btnLogOut"));
 
 	function logIn(){
 		console.log("logged in");

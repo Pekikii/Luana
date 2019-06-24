@@ -2,7 +2,7 @@
 (function($) {
 	const auth = firebase.auth();
 	const db = firebase.firestore();
-	var pageName = window.location.pathname;
+	var pageName = window.location.pathname.split("/").pop();
 	var col;
 	var userMail;
 	var query;
@@ -15,6 +15,7 @@
 			start = 1;
 		}
 	   else {
+			// Not logged in
 		}
 	});
 	function addItem(name, doc, description, price, image){
@@ -27,6 +28,11 @@
 					'</header>' + 
 					'<p>' + description + '</p>' + 
 					'<b>Price: $' + price + '</b>' + 
+					/*'<footer>' + 
+						'<ul class="actions">' + 
+							'<li><a href="#" class="button alt">Find out more</a></li>' + 
+						'</ul>' + 
+					'</footer>' +*/ 
 				'</section>' + 
 			'</div>'
 		)
@@ -35,10 +41,10 @@
 		};
 		
 	setInterval(function(){
-		if(pageName == "/cars"){
+		if(pageName == "cars.html"){
 			col = "cars";
 		
-		}else if(pageName == "/realEstate") {
+		}else if(pageName == "realEstate.html") {
 			col = "realEstate";
 			
 		}
@@ -51,9 +57,9 @@
 						if(userMail != undefined){
 							addItem(doc.data().name, doc, doc.data().description, doc.data().price, doc.data().image);
 						}
-					}
-					
+					}	
 				})
+			
 				
 			});
 

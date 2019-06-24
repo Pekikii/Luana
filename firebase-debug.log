@@ -1342,3 +1342,1288 @@
     at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
     at emitOne (events.js:121:20)
     at process.emit (events.js:211:7)
+[debug] [2019-06-23T23:34:54.297Z] ----------------------------------------------------------------------
+[debug] [2019-06-23T23:34:54.299Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-23T23:34:54.299Z] CLI Version:   7.0.1
+[debug] [2019-06-23T23:34:54.299Z] Platform:      linux
+[debug] [2019-06-23T23:34:54.299Z] Node Version:  v8.10.0
+[debug] [2019-06-23T23:34:54.299Z] Time:          Mon Jun 24 2019 01:34:54 GMT+0200 (CEST)
+[debug] [2019-06-23T23:34:54.299Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-23T23:34:54.310Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-23T23:34:54.310Z] > authorizing via signed-in user
+[debug] [2019-06-23T23:34:54.310Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-23T23:34:54.312Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-23T23:34:55.262Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-23T23:34:55.264Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-23T23:34:55.603Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-23T23:34:55.610Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-23T23:34:57.224Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 55 files in public
+[debug] [2019-06-23T23:34:57.275Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-23T23:34:57.447Z] [hosting] hash cache [cHVibGlj] stored for 55 files
+[debug] [2019-06-23T23:34:57.447Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-23T23:34:57.447Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/11713c471a68f379:populateFiles  
+ <request body omitted>
+[debug] [2019-06-23T23:34:59.817Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-23T23:34:59.823Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-23T23:34:59.824Z] [hosting] uploads queued: 1
+[debug] [2019-06-23T23:35:02.917Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-23T23:35:02.920Z] [hosting] deploy completed after 5694ms
+[debug] [2019-06-23T23:35:02.921Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/11713c471a68f379"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-23T23:35:02.922Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/11713c471a68f379?updateMask=status  
+
+[debug] [2019-06-23T23:35:04.014Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-23T23:35:04.015Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-23T23:35:04.017Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/11713c471a68f379  
+
+[debug] [2019-06-23T23:35:05.077Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-23T23:35:05.077Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-23T23:35:05.086Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:02:35.994Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:02:35.996Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:02:35.996Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:02:35.996Z] Platform:      linux
+[debug] [2019-06-24T20:02:35.996Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:02:35.996Z] Time:          Mon Jun 24 2019 22:02:35 GMT+0200 (CEST)
+[debug] [2019-06-24T20:02:35.996Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:02:36.013Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:02:36.013Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:02:36.014Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:02:36.015Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-24T20:02:36.015Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-24T20:02:36.308Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:02:36.315Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:02:37.255Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:02:37.258Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:02:37.715Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:02:37.722Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:02:39.315Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:02:39.387Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:02:39.733Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:02:39.733Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:02:39.733Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/4ae93756ee658f71:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:02:42.385Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:02:42.393Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:02:42.393Z] [hosting] uploads queued: 7
+[debug] [2019-06-24T20:02:45.873Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:02:45.874Z] [hosting] deploy completed after 6558ms
+[debug] [2019-06-24T20:02:45.874Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/4ae93756ee658f71"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:02:45.875Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/4ae93756ee658f71?updateMask=status  
+
+[debug] [2019-06-24T20:02:47.060Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:02:47.061Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:02:47.062Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/4ae93756ee658f71  
+
+[debug] [2019-06-24T20:02:48.115Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:02:48.116Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:02:48.123Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:39:37.724Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:39:37.726Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:39:37.726Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:39:37.726Z] Platform:      linux
+[debug] [2019-06-24T20:39:37.726Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:39:37.726Z] Time:          Mon Jun 24 2019 22:39:37 GMT+0200 (CEST)
+[debug] [2019-06-24T20:39:37.727Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: There was an error loading firebase.json:
+
+Unexpected token 'c' at 9:3
+	"cleanUrls": true,
+	 ^
+File: "/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase.json"
+[debug] [2019-06-24T20:39:37.994Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+    at process.exit (internal/process.js:157:15)
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/errorOut.js:14:17)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-06-24T20:39:53.038Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:39:53.040Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:39:53.040Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:39:53.041Z] Platform:      linux
+[debug] [2019-06-24T20:39:53.041Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:39:53.041Z] Time:          Mon Jun 24 2019 22:39:53 GMT+0200 (CEST)
+[debug] [2019-06-24T20:39:53.041Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: There was an error loading firebase.json:
+
+Unexpected end of input at 25:2
+
+^
+File: "/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase.json"
+[debug] [2019-06-24T20:39:53.320Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+    at process.exit (internal/process.js:157:15)
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/errorOut.js:14:17)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-06-24T20:40:06.352Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:40:06.354Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:40:06.354Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:40:06.354Z] Platform:      linux
+[debug] [2019-06-24T20:40:06.354Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:40:06.354Z] Time:          Mon Jun 24 2019 22:40:06 GMT+0200 (CEST)
+[debug] [2019-06-24T20:40:06.354Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: There was an error loading firebase.json:
+
+Unexpected end of input at 24:3
+}
+ ^
+File: "/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase.json"
+[debug] [2019-06-24T20:40:06.653Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+    at process.exit (internal/process.js:157:15)
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/errorOut.js:14:17)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-06-24T20:40:20.482Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:40:20.484Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:40:20.484Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:40:20.484Z] Platform:      linux
+[debug] [2019-06-24T20:40:20.484Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:40:20.484Z] Time:          Mon Jun 24 2019 22:40:20 GMT+0200 (CEST)
+[debug] [2019-06-24T20:40:20.484Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:40:20.495Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:40:20.495Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:40:20.495Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:40:20.496Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:40:21.584Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:40:21.589Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:40:22.150Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:40:22.160Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:40:23.995Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:40:24.044Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:40:24.196Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:40:24.197Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:40:24.197Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/ce21237f5b6e08dd:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:40:26.821Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:40:26.822Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:40:26.822Z] [hosting] uploads queued: 0
+[debug] [2019-06-24T20:40:26.822Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:40:26.825Z] [hosting] deploy completed after 2829ms
+[debug] [2019-06-24T20:40:26.826Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/ce21237f5b6e08dd"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:40:26.826Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/ce21237f5b6e08dd?updateMask=status  
+
+[debug] [2019-06-24T20:40:28.028Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:40:28.029Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:40:28.030Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/ce21237f5b6e08dd  
+
+[debug] [2019-06-24T20:40:29.311Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:40:29.312Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:40:29.321Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:50:10.657Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:50:10.659Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:50:10.660Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:50:10.660Z] Platform:      linux
+[debug] [2019-06-24T20:50:10.660Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:50:10.660Z] Time:          Mon Jun 24 2019 22:50:10 GMT+0200 (CEST)
+[debug] [2019-06-24T20:50:10.660Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:50:10.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:50:10.669Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:50:10.669Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:50:10.670Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-24T20:50:10.670Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-24T20:50:11.186Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:50:11.190Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:50:12.202Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:50:12.204Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:50:12.776Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:50:12.781Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:50:14.594Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:50:14.650Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:50:14.815Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:50:14.816Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:50:14.816Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/a50321ddf2d9737a:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:50:17.029Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:50:17.032Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:50:17.032Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:50:20.852Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:50:20.852Z] [hosting] deploy completed after 6257ms
+[debug] [2019-06-24T20:50:20.853Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/a50321ddf2d9737a"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:50:20.853Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/a50321ddf2d9737a?updateMask=status  
+
+[debug] [2019-06-24T20:50:22.054Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:50:22.054Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:50:22.055Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/a50321ddf2d9737a  
+
+[debug] [2019-06-24T20:50:23.215Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:50:23.216Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:50:23.222Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:51:02.765Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:51:02.768Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:51:02.769Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:51:02.769Z] Platform:      linux
+[debug] [2019-06-24T20:51:02.769Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:51:02.769Z] Time:          Mon Jun 24 2019 22:51:02 GMT+0200 (CEST)
+[debug] [2019-06-24T20:51:02.769Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:51:02.783Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:51:02.783Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:51:02.783Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:51:02.785Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:51:03.945Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:51:03.947Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:51:04.430Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:51:04.435Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:51:06.037Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:51:06.089Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:51:06.276Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:51:06.276Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:51:06.276Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/a7589e2bdbc7e4a6:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:51:08.303Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:51:08.305Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:51:08.305Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:51:10.354Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:51:10.354Z] [hosting] deploy completed after 4317ms
+[debug] [2019-06-24T20:51:10.355Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/a7589e2bdbc7e4a6"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:51:10.355Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/a7589e2bdbc7e4a6?updateMask=status  
+
+[debug] [2019-06-24T20:51:11.601Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:51:11.602Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:51:11.603Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/a7589e2bdbc7e4a6  
+
+[debug] [2019-06-24T20:51:12.874Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:51:12.875Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:51:12.883Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:52:06.327Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:52:06.329Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:52:06.329Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:52:06.330Z] Platform:      linux
+[debug] [2019-06-24T20:52:06.330Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:52:06.330Z] Time:          Mon Jun 24 2019 22:52:06 GMT+0200 (CEST)
+[debug] [2019-06-24T20:52:06.330Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:52:06.339Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:52:06.340Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:52:06.340Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:52:06.342Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:52:07.316Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:52:07.318Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:52:07.803Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:52:07.807Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:52:09.419Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:52:09.463Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:52:09.641Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:52:09.641Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:52:09.641Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/97b9463a63385ae0:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:52:11.946Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:52:11.948Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:52:11.948Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:52:15.002Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:52:15.002Z] [hosting] deploy completed after 5582ms
+[debug] [2019-06-24T20:52:15.003Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/97b9463a63385ae0"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:52:15.004Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/97b9463a63385ae0?updateMask=status  
+
+[debug] [2019-06-24T20:52:16.201Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:52:16.201Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:52:16.202Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/97b9463a63385ae0  
+
+[debug] [2019-06-24T20:52:17.393Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:52:17.393Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:52:17.401Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:52:58.522Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:52:58.524Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:52:58.525Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:52:58.525Z] Platform:      linux
+[debug] [2019-06-24T20:52:58.525Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:52:58.525Z] Time:          Mon Jun 24 2019 22:52:58 GMT+0200 (CEST)
+[debug] [2019-06-24T20:52:58.525Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:52:58.535Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:52:58.535Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:52:58.535Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:52:58.536Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:52:59.603Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:52:59.605Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:53:00.197Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:53:00.202Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:53:01.908Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:53:01.965Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:53:02.124Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:53:02.124Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:53:02.124Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/ae22313e7cafe204:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:53:04.685Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:53:04.688Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:53:04.688Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:53:07.944Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:53:07.945Z] [hosting] deploy completed after 6036ms
+[debug] [2019-06-24T20:53:07.945Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/ae22313e7cafe204"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:53:07.946Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/ae22313e7cafe204?updateMask=status  
+
+[debug] [2019-06-24T20:53:09.270Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:53:09.271Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:53:09.271Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/ae22313e7cafe204  
+
+[debug] [2019-06-24T20:53:10.413Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:53:10.414Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:53:10.422Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:53:51.660Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:53:51.662Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:53:51.663Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:53:51.663Z] Platform:      linux
+[debug] [2019-06-24T20:53:51.663Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:53:51.663Z] Time:          Mon Jun 24 2019 22:53:51 GMT+0200 (CEST)
+[debug] [2019-06-24T20:53:51.663Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:53:51.673Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:53:51.673Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:53:51.674Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:53:51.675Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:53:52.824Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:53:52.826Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:53:53.468Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:53:53.472Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:53:55.191Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:53:55.245Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:53:55.420Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:53:55.421Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:53:55.422Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/b96049eab8c9b1fa:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:53:57.190Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:53:57.191Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:53:57.191Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:54:00.250Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:54:00.251Z] [hosting] deploy completed after 5059ms
+[debug] [2019-06-24T20:54:00.251Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/b96049eab8c9b1fa"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:54:00.251Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/b96049eab8c9b1fa?updateMask=status  
+
+[debug] [2019-06-24T20:54:01.435Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:54:01.436Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:54:01.436Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/b96049eab8c9b1fa  
+
+[debug] [2019-06-24T20:54:02.573Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:54:02.574Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:54:02.580Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:55:37.026Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:55:37.028Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:55:37.028Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:55:37.028Z] Platform:      linux
+[debug] [2019-06-24T20:55:37.028Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:55:37.028Z] Time:          Mon Jun 24 2019 22:55:37 GMT+0200 (CEST)
+[debug] [2019-06-24T20:55:37.028Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:55:37.039Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:55:37.039Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:55:37.039Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:55:37.041Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:55:38.097Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:55:38.099Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:55:38.591Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:55:38.596Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:55:40.189Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:55:40.247Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:55:40.405Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:55:40.406Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:55:40.406Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/3ad0f54775751642:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:55:42.146Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:55:42.149Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:55:42.149Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:55:44.449Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:55:44.450Z] [hosting] deploy completed after 4260ms
+[debug] [2019-06-24T20:55:44.450Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/3ad0f54775751642"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:55:44.450Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/3ad0f54775751642?updateMask=status  
+
+[debug] [2019-06-24T20:55:45.505Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:55:45.506Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:55:45.506Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/3ad0f54775751642  
+
+[debug] [2019-06-24T20:55:46.596Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:55:46.596Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:55:46.603Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T20:56:37.481Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T20:56:37.483Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T20:56:37.483Z] CLI Version:   7.0.1
+[debug] [2019-06-24T20:56:37.483Z] Platform:      linux
+[debug] [2019-06-24T20:56:37.483Z] Node Version:  v8.10.0
+[debug] [2019-06-24T20:56:37.483Z] Time:          Mon Jun 24 2019 22:56:37 GMT+0200 (CEST)
+[debug] [2019-06-24T20:56:37.483Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T20:56:37.495Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T20:56:37.496Z] > authorizing via signed-in user
+[debug] [2019-06-24T20:56:37.496Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T20:56:37.498Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T20:56:37.858Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:56:37.860Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T20:56:38.242Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T20:56:38.247Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T20:56:39.679Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T20:56:39.732Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T20:56:39.898Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T20:56:39.899Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T20:56:39.899Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/6ba4a5c17764af80:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T20:56:41.746Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:56:41.748Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T20:56:41.748Z] [hosting] uploads queued: 1
+[debug] [2019-06-24T20:56:44.192Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T20:56:44.192Z] [hosting] deploy completed after 4512ms
+[debug] [2019-06-24T20:56:44.193Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/6ba4a5c17764af80"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T20:56:44.193Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/6ba4a5c17764af80?updateMask=status  
+
+[debug] [2019-06-24T20:56:45.282Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:56:45.282Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T20:56:45.283Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/6ba4a5c17764af80  
+
+[debug] [2019-06-24T20:56:46.330Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T20:56:46.331Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T20:56:46.337Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T21:05:04.192Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T21:05:04.196Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T21:05:04.196Z] CLI Version:   7.0.1
+[debug] [2019-06-24T21:05:04.196Z] Platform:      linux
+[debug] [2019-06-24T21:05:04.197Z] Node Version:  v8.10.0
+[debug] [2019-06-24T21:05:04.197Z] Time:          Mon Jun 24 2019 23:05:04 GMT+0200 (CEST)
+[debug] [2019-06-24T21:05:04.197Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T21:05:04.209Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T21:05:04.209Z] > authorizing via signed-in user
+[debug] [2019-06-24T21:05:04.209Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T21:05:04.210Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T21:05:05.288Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:05:05.290Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T21:05:05.659Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T21:05:05.663Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T21:05:07.148Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T21:05:07.194Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T21:05:07.351Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T21:05:07.352Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T21:05:07.352Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/33858d2cd2e248b0:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T21:05:09.213Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:05:09.215Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T21:05:09.216Z] [hosting] uploads queued: 2
+[debug] [2019-06-24T21:05:12.340Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T21:05:12.341Z] [hosting] deploy completed after 5192ms
+[debug] [2019-06-24T21:05:12.341Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "**/firebase-debug.log"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/33858d2cd2e248b0"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T21:05:12.342Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/33858d2cd2e248b0?updateMask=status  
+
+[debug] [2019-06-24T21:05:13.504Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:05:13.505Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T21:05:13.506Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/33858d2cd2e248b0  
+
+[debug] [2019-06-24T21:05:14.694Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:05:14.695Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T21:05:14.700Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T21:12:37.688Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T21:12:37.690Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T21:12:37.690Z] CLI Version:   7.0.1
+[debug] [2019-06-24T21:12:37.690Z] Platform:      linux
+[debug] [2019-06-24T21:12:37.690Z] Node Version:  v8.10.0
+[debug] [2019-06-24T21:12:37.690Z] Time:          Mon Jun 24 2019 23:12:37 GMT+0200 (CEST)
+[debug] [2019-06-24T21:12:37.690Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T21:12:37.701Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T21:12:37.701Z] > authorizing via signed-in user
+[debug] [2019-06-24T21:12:37.702Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T21:12:37.703Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T21:12:38.653Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:12:38.654Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T21:12:38.980Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T21:12:38.986Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T21:12:40.893Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 48 files in public
+[debug] [2019-06-24T21:12:40.945Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T21:12:41.096Z] [hosting] hash cache [cHVibGlj] stored for 48 files
+[debug] [2019-06-24T21:12:41.096Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T21:12:41.097Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/1bdab2c39d25b38d:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T21:12:43.407Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:12:43.407Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T21:12:43.408Z] [hosting] uploads queued: 0
+[debug] [2019-06-24T21:12:43.408Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T21:12:43.408Z] [hosting] deploy completed after 2512ms
+[debug] [2019-06-24T21:12:43.409Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "**/firebase-debug.log"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/1bdab2c39d25b38d"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T21:12:43.409Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/1bdab2c39d25b38d?updateMask=status  
+
+[debug] [2019-06-24T21:12:44.514Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:12:44.514Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T21:12:44.515Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/1bdab2c39d25b38d  
+
+[debug] [2019-06-24T21:12:45.707Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:12:45.707Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T21:12:45.757Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-24T21:33:59.876Z] ----------------------------------------------------------------------
+[debug] [2019-06-24T21:33:59.878Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-24T21:33:59.878Z] CLI Version:   7.0.1
+[debug] [2019-06-24T21:33:59.878Z] Platform:      linux
+[debug] [2019-06-24T21:33:59.878Z] Node Version:  v8.10.0
+[debug] [2019-06-24T21:33:59.878Z] Time:          Mon Jun 24 2019 23:33:59 GMT+0200 (CEST)
+[debug] [2019-06-24T21:33:59.878Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-24T21:33:59.889Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-24T21:33:59.889Z] > authorizing via signed-in user
+[debug] [2019-06-24T21:33:59.889Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-24T21:33:59.891Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-24T21:34:00.956Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:34:00.961Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/luana-72d14  
+ 
+[debug] [2019-06-24T21:34:01.390Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'luana-72d14'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-24T21:34:01.395Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions  
+
+[debug] [2019-06-24T21:34:03.001Z] <<< HTTP RESPONSE 200
+[info] i  hosting[luana-72d14]: beginning deploy...
+[info] i  hosting[luana-72d14]: found 47 files in public
+[debug] [2019-06-24T21:34:03.051Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-24T21:34:03.202Z] [hosting] hash cache [cHVibGlj] stored for 47 files
+[debug] [2019-06-24T21:34:03.202Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-24T21:34:03.202Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/6f90fc847c27e5ac:populateFiles  
+ <request body omitted>
+[debug] [2019-06-24T21:34:04.930Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:34:04.938Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-24T21:34:04.938Z] [hosting] uploads queued: 8
+[debug] [2019-06-24T21:34:08.536Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[luana-72d14]: file upload complete
+[debug] [2019-06-24T21:34:08.537Z] [hosting] deploy completed after 5535ms
+[debug] [2019-06-24T21:34:08.537Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "**/firebase-debug.log"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=30672000"
+            }
+          ]
+        }
+      ],
+      "site": "luana-72d14"
+    },
+    "site": "luana-72d14",
+    "version": "sites/luana-72d14/versions/6f90fc847c27e5ac"
+  }
+]
+[info] i  hosting[luana-72d14]: finalizing version...
+[debug] [2019-06-24T21:34:08.538Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/versions/6f90fc847c27e5ac?updateMask=status  
+
+[debug] [2019-06-24T21:34:09.679Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:34:09.679Z] [hosting] finalized version for luana-72d14:
+[info] ✔  hosting[luana-72d14]: version finalized
+[info] i  hosting[luana-72d14]: releasing new version...
+[debug] [2019-06-24T21:34:09.680Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/luana-72d14/releases?version_name=sites/luana-72d14/versions/6f90fc847c27e5ac  
+
+[debug] [2019-06-24T21:34:10.883Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-24T21:34:10.885Z] [hosting] release:
+[info] ✔  hosting[luana-72d14]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/luana-72d14/overview
+[info] Hosting URL: https://luana-72d14.firebaseapp.com
+[debug] [2019-06-24T21:34:10.894Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)

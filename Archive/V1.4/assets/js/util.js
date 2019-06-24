@@ -16,7 +16,20 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target');
-
+			/*if($a.attr("id") === "btnLogOut") {
+				console.log($a);
+				b.push(
+					'<a ' +
+						'class="link depth-' + indent + '"' +
+						'id="btnLogOut" ' + 
+						( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
+						( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
+					'>' +
+						'<span class="indent-' + indent + '"></span>' +
+						$this.text() +
+					'</a>'
+				);
+			} else {*/ 
 				b.push(
 					'<a ' +
 						'class="link depth-' + indent + '"' +

@@ -4,6 +4,14 @@
 	var	$window = $(window),
 		$body = $('body');
 
+	// Breakpoints.
+		breakpoints({
+			xlarge:  [ '1281px',  '1680px' ],
+			large:   [ '981px',   '1280px' ],
+			medium:  [ '737px',   '980px'  ],
+			small:   [ null,      '736px'  ]
+		});
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
@@ -35,6 +43,7 @@
 				'<div id="navPanel">' +
 					'<nav>' +
 						$('#nav').navList() +
+					//	$('#btns').navList() +
 					'</nav>' +
 				'</div>'
 			)
@@ -49,6 +58,7 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+			//$($('#btns').navList()).appendTo("#navPanel nav");
 
 
 		}

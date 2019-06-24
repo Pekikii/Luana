@@ -2,9 +2,25 @@
   "hosting": {
     "public": "public",
     "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+		"firebase.json",
+		"**/.*",
+		"**/node_modules/**",
+		"**/firebase-debug.log" 
+    ],
+	"cleanUrls": true,
+
+    "headers": [ {
+        "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers" : [ {
+			"key" : "Access-Control-Allow-Origin",
+			"value" : "*"
+        } ]
+        }, {
+		"source" : "**/*.@(jpg|jpeg|gif|png)",
+		"headers" : [ {
+			"key" : "Cache-Control",
+			"value" : "max-age=30672000"
+        } ]
+        } ]
+}
 }

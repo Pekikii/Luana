@@ -1,55 +1,117 @@
 
 (function($) {
 
-	var	$window = $(window),
-		$body = $('body');
+    var	$window = $(window),
+	$body = $('body');
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+    // Play initial animations on page load.
+    $window.on('load', function() {
+	window.setTimeout(function() {
+	    $body.removeClass('is-preload');
+	}, 100);
+    });
 
-	// Dropdowns.
-		if(typeof $('#nav > ul').dropotron !== "undefined") {
-			$('#nav > ul').dropotron({
-				mode: 'fade',
-				noOpenerFade: true,
-				alignment: 'center'
-			});
-		
+    // Dropdowns.
+    if(typeof $('#nav > ul').dropotron !== "undefined") {
+	$('#nav > ul').dropotron({
+	    mode: 'fade',
+	    noOpenerFade: true,
+	    alignment: 'center'
+	});
+	
 	// Nav.
 
-		// Title Bar.
-			
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
-		console.log($('#btns').navList());
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+	// Title Bar.
+	
+	$(
+	    '<div id="titleBar">' +
+		'<a href="#navPanel" class="toggle"></a>' +
+		'</div>'
+	)
+	    .appendTo($body);
+	console.log($('#btns').navList());
+	// Panel.
+	$(
+	    '<div id="navPanel">' +
+		'<nav>' +
+		$('#nav').navList() +
+		'</nav>' +
+		'</div>'
+	)
+	    .appendTo($body)
+	    .panel({
+		delay: 500,
+		hideOnClick: true,
+		hideOnSwipe: true,
+		resetScroll: true,
+		resetForms: true,
+		side: 'left',
+		target: $body,
+		visibleClass: 'navPanel-visible'
+	    });
 
 
-		}
+    }
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    var pageName = window.location.pathname;
+    var col;
+    var userMail;
+    var query;
+    var start;
+    const $row = $("section>.row.aln-center");
+    
+    auth.onAuthStateChanged(function(user) {
+	if (user) {
+	    userMail = user.email;
+	    start = 1;
+	}
+	else {
+	}
+    });
+    function addItem(name, doc, description, price, image){
+	$(											
+	    '<div class="col-8 col-10-medium col-16-small">' + 
+		'<section class="box">' +
+		'<a href="#" class="image featured"><img src="images/' + image + '" alt="" /></a>' + 
+		'<header>' + 
+		'<h3>' + name + '</h3>' + 
+		'</header>' + 
+		'<p>' + description + '</p>' + 
+		'<b>Price: $' + price + '</b>' + 
+		'</section>' + 
+		'</div>'
+	)
+	    .appendTo($row);
+	
+    };
+    
+    setInterval(function(){
+	if(pageName == "/cars"){
+	    col = "cars";
+	    
+	}else if(pageName == "/realEstate") {
+	    col = "realEstate";
+	    
+	}
+
+	if(start && userMail != undefined && col != undefined){
+	    db.collection(col).get().then(function(snapshot) {
+		snapshot.docs.forEach(doc => {
+		    if(doc.data().authorMail != userMail){
+			addItem(doc.data().name, doc, doc.data().description, doc.data().price, doc.data().image);
+			}
+		    })
+		
+	    });
+
+	    start = 0;
+	    
+	}}, 1);
+
+
+
+    
+    
 })(jQuery);

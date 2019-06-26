@@ -3558,3 +3558,94 @@ File: "/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase.json"
     at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
     at emitOne (events.js:121:20)
     at process.emit (events.js:211:7)
+[debug] [2019-06-26T14:31:25.976Z] ----------------------------------------------------------------------
+[debug] [2019-06-26T14:31:25.978Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-26T14:31:25.978Z] CLI Version:   7.0.2
+[debug] [2019-06-26T14:31:25.978Z] Platform:      linux
+[debug] [2019-06-26T14:31:25.978Z] Node Version:  v8.10.0
+[debug] [2019-06-26T14:31:25.978Z] Time:          Wed Jun 26 2019 16:31:25 GMT+0200 (CEST)
+[debug] [2019-06-26T14:31:25.978Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-26T14:31:25.990Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-26T14:31:25.990Z] > authorizing via signed-in user
+[debug] [2019-06-26T14:31:25.990Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get"]
+[debug] [2019-06-26T14:31:25.992Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-26T14:31:25.992Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-26T14:31:26.276Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-26T14:31:26.281Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-26T14:31:27.216Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-26T14:31:27.219Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14  
+ 
+[debug] [2019-06-26T14:31:28.075Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana'...
+[info] 
+[debug] [2019-06-26T14:31:28.077Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/708590523125/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-26T14:31:28.494Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] Shutting down...
+[debug] [2019-06-26T14:35:30.744Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-26T14:35:32.961Z] ----------------------------------------------------------------------
+[debug] [2019-06-26T14:35:32.963Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-26T14:35:32.963Z] CLI Version:   7.0.2
+[debug] [2019-06-26T14:35:32.963Z] Platform:      linux
+[debug] [2019-06-26T14:35:32.963Z] Node Version:  v8.10.0
+[debug] [2019-06-26T14:35:32.963Z] Time:          Wed Jun 26 2019 16:35:32 GMT+0200 (CEST)
+[debug] [2019-06-26T14:35:32.964Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-26T14:35:32.974Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-26T14:35:32.974Z] > authorizing via signed-in user
+[debug] [2019-06-26T14:35:32.974Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get"]
+[debug] [2019-06-26T14:35:32.975Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-26T14:35:33.934Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-26T14:35:33.938Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14  
+ 
+[debug] [2019-06-26T14:35:34.220Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana'...
+[info] 
+[debug] [2019-06-26T14:35:34.225Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/708590523125/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-26T14:35:34.658Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] Shutting down...
+[debug] [2019-06-26T14:40:56.772Z] Error: ETXTBSY: text file is busy, unlink '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana/firebase-debug.log'
+    at Object.fs.unlinkSync (fs.js:1061:18)
+    at process.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:68:12)
+    at emitOne (events.js:121:20)
+    at process.emit (events.js:211:7)
+[debug] [2019-06-26T14:40:58.802Z] ----------------------------------------------------------------------
+[debug] [2019-06-26T14:40:58.804Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-26T14:40:58.805Z] CLI Version:   7.0.2
+[debug] [2019-06-26T14:40:58.805Z] Platform:      linux
+[debug] [2019-06-26T14:40:58.805Z] Node Version:  v8.10.0
+[debug] [2019-06-26T14:40:58.805Z] Time:          Wed Jun 26 2019 16:40:58 GMT+0200 (CEST)
+[debug] [2019-06-26T14:40:58.805Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-26T14:40:58.814Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-26T14:40:58.814Z] > authorizing via signed-in user
+[debug] [2019-06-26T14:40:58.814Z] [iam] checking project luana-72d14 for permissions ["firebase.projects.get"]
+[debug] [2019-06-26T14:40:58.816Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14:testIamPermissions  
+
+[debug] [2019-06-26T14:40:59.765Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-26T14:40:59.768Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/luana-72d14  
+ 
+[debug] [2019-06-26T14:41:00.617Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/media/sf_Shared_Folder_Ubuntu_Main_18.04.2/Luana'...
+[info] 
+[debug] [2019-06-26T14:41:00.620Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/708590523125/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-26T14:41:00.987Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000

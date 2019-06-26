@@ -8,40 +8,27 @@
     var pageName = window.location.pathname;
     var col;
     var userMail;
-    var query;
     var start;
-    const $row = $("section>.row.aln-center");
+    var $row = $("section>.row.aln-center");
     
-
-
-
-    // Play initial animations on page load.
     $window.on('load', function() {
 	window.setTimeout(function() {
 	    $body.removeClass('is-preload');
 	}, 100);
     });
 
-    // Dropdowns.
     if(typeof $('#nav > ul').dropotron !== "undefined") {
 	$('#nav > ul').dropotron({
 	    mode: 'fade',
 	    noOpenerFade: true,
 	    alignment: 'center'
 	});
-	
-	// Nav.
-
-	// Title Bar.
-	
 	$(
 	    '<div id="titleBar">' +
 		'<a href="#navPanel" class="toggle"></a>' +
 		'</div>'
 	)
 	    .appendTo($body);
-	console.log($('#btns').navList());
-	// Panel.
 	$(
 	    '<div id="navPanel">' +
 		'<nav>' +
@@ -60,43 +47,7 @@
 		target: $body,
 		visibleClass: 'navPanel-visible'
 	    });
-
-
     }
-
-    function logIn(){
-	var userEmail = document.getElementById("txtEmail").value;
-	var userPass = document.getElementById("txtPassword").value;
-	auth.signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-	    var errorCode = error.code;
-	    var errorMessage = error.message;
-	    window.alert("Error : " + errorMessage);
-	    
-	});
-    };
-    $(document).ready(function(){
-	$("button#btnLogIn").on("click", logIn);
-	$("button#btnLogIn").on("tap", logIn);
-	
-    });
-
-
-    function logOut(){
-	auth.signOut().then(function(){
-	    return true;
-
-	}).catch(function(error) {
-	    var errorCode = error.code;
-	    var errorMessage = error.message;
-	    window.alert("Error : " + errorMessage);
-
-	});
-    };
-    $(document).ready(function(){
-	$("button#btnLogOut").on("click", logOut);
-	$("button#btnLogOut").on("tap", logOut);
-	
-    });
 
     auth.onAuthStateChanged(function(user) {
 	if (user) {
@@ -115,6 +66,41 @@
 
 	}
     });
+
+
+    function logIn(){
+	var userEmail = document.getElementById("txtEmail").value;
+	var userPass = document.getElementById("txtPassword").value;
+	auth.signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+	    var errorCode = error.code;
+	    var errorMessage = error.message;
+	    window.alert("Error : " + errorMessage);
+	    
+	});
+    };
+    $(document).ready(function(){
+	$("button#btnLogIn").on("click", logIn);
+	$("button#btnLogIn").on("tap", logIn);
+	
+    });
+
+    function logOut(){
+	auth.signOut().then(function(){
+	    return true;
+
+	}).catch(function(error) {
+	    var errorCode = error.code;
+	    var errorMessage = error.message;
+	    window.alert("Error : " + errorMessage);
+
+	});
+    };
+    $(document).ready(function(){
+	$("button#btnLogOut").on("click", logOut);
+	$("button#btnLogOut").on("tap", logOut);
+	
+    });
+
     function addItem(name, doc, description, price, image){
 	$(											
 	    '<div class="col-8 col-10-medium col-16-small">' + 
@@ -129,36 +115,22 @@
 		'</div>'
 	)
 	    .appendTo($row);
-	
     };
-    
+
     setInterval(function(){
 	if(pageName == "/cars"){
 	    col = "cars";
-	    
 	}else if(pageName == "/realEstate") {
 	    col = "realEstate";
-	    
 	}
-
 	if(start && userMail != undefined && col != undefined){
 	    db.collection(col).get().then(function(snapshot) {
 		snapshot.docs.forEach(doc => {
-
 		    if(doc.data().authorMail != userMail){
 			addItem(doc.data().name, doc, doc.data().description, doc.data().price, doc.data().image);
-
 			}
-
 		    })
-
 	    });
 	    start = 0;
-	    
 	}}, 1);
-
-
-
-    
-    
 })(jQuery);
